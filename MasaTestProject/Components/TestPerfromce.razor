@@ -1,0 +1,17 @@
+﻿@inject ILogger<TestPerfromce> logger
+
+<MButton OnClick="ShowNumber">Show Number</MButton>
+
+@code
+{
+    public int renders = 0;
+    protected override void OnAfterRender(bool firstRender)
+    {
+        renders++;
+        base.OnAfterRender(firstRender);
+    }
+    public void ShowNumber()
+    {
+        logger.LogInformation("Renders On This Component {renders}", renders);
+    }
+}

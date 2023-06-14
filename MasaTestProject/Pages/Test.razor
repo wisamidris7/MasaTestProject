@@ -1,0 +1,23 @@
+﻿@page "/test"
+@using MasaTestProject.Components
+
+<MTabs @bind-Value="index">
+    <MTab>Example1</MTab>
+    <MTab>Example2</MTab>
+    <MTab>Example3</MTab>
+</MTabs>
+<MTabsItems Value="index">
+    <MTabItem>
+        <TestPerfromce/>
+    </MTabItem>
+    <MTabItem>
+        <TestPerfromce />
+    </MTabItem>
+    <MTabItem>
+        <TestPerfromce />
+    </MTabItem>
+</MTabsItems>
+
+@code{
+    public StringNumber index = 0;
+}
